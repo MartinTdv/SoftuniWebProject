@@ -12,8 +12,8 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ConnectingPeople.Data", "C:\\Users\\ElusiveDeath\\Desktop\\Niki Template\\Data\\ConnectingPeople.Data", "ConnectingPeople.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ConnectingPeople.Web", "C:\\Users\\ElusiveDeath\\Desktop\\Niki Template\\Web\\ConnectingPeople.Web", "ConnectingPeople.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ConnectingPeople.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\ElusiveDeath\\Desktop\\Niki Template\\Data\\ConnectingPeople.Data", "ConnectingPeople.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("ConnectingPeople.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\ElusiveDeath\\Desktop\\Niki Template\\Web\\ConnectingPeople.Web", "ConnectingPeople.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConnectingPeople.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

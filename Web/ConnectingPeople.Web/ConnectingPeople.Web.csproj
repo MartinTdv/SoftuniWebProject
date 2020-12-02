@@ -9,11 +9,27 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\Pages\Account\Manage\**" />
+    <Content Remove="Areas\Identity\Pages\Account\Manage\**" />
+    <EmbeddedResource Remove="Areas\Identity\Pages\Account\Manage\**" />
+    <None Remove="Areas\Identity\Pages\Account\Manage\**" />
+  </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Identity\Pages\Account\Manage\Index.cshtml.cs" />
+    <Compile Include="Areas\Identity\Pages\Account\Manage\ManageNavPages.cs" />
+  </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.9" />
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
@@ -35,5 +51,21 @@
     <ProjectReference Include="..\..\Services\ConnectingPeople.Services\ConnectingPeople.Services.csproj" />
     <ProjectReference Include="..\ConnectingPeople.Web.Infrastructure\ConnectingPeople.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\ConnectingPeople.Web.ViewModels\ConnectingPeople.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Pages\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+    <None Include="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
   </ItemGroup>
 </Project>

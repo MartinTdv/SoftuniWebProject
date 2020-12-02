@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CeIiK71onad8IaHGa25y5b0FWpx4+m4gdo1yAR0fN++o+VmOT8rZas13CcpRXg31NlfE70DvDgUccnLwp1aMSA==",
+  "dgSpecHash": "F+6x4F7mbczCBZpVsq+piN+eDU47Uxv8Gn/Myazee/446im0WleV6cC36MOR8UoWwinCClXdPHnGerX4f3+YMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ElusiveDeath\\Desktop\\Niki Template\\Tests\\ConnectingPeople.Web.Tests\\ConnectingPeople.Web.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ElusiveDeath\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ElusiveDeath\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
+    "C:\\Users\\ElusiveDeath\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\ElusiveDeath\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\ElusiveDeath\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",
     "C:\\Users\\ElusiveDeath\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.9\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.9.nupkg.sha512",

@@ -45,6 +45,8 @@ namespace ConnectingPeople.Data.Models
 
         public string ImageName { get; set; }
 
+        public ICollection<HelpTask> HelpTasks { get; set; }
+
 
         // Audit info
         public DateTime CreatedOn { get; set; }

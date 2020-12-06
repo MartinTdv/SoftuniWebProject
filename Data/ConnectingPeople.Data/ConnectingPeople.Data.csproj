@@ -19,6 +19,12 @@
     <Compile Remove="Migrations\20201203131030_ApplicationUserUpdated.Designer.cs" />
     <Compile Remove="Migrations\20201203131558_ApplicationUserUpdate.cs" />
     <Compile Remove="Migrations\20201203131558_ApplicationUserUpdate.Designer.cs" />
+    <Compile Remove="Migrations\20201206164517_HelpTasksAddedWithNeededTables.cs" />
+    <Compile Remove="Migrations\20201206164517_HelpTasksAddedWithNeededTables.Designer.cs" />
+    <Compile Remove="Migrations\20201206172357_HelpTasksAddedWithNeededTables.cs" />
+    <Compile Remove="Migrations\20201206172357_HelpTasksAddedWithNeededTables.Designer.cs" />
+    <Compile Remove="Migrations\20201206173153_HelpTasksAdded.cs" />
+    <Compile Remove="Migrations\20201206173153_HelpTasksAdded.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

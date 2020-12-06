@@ -162,6 +162,111 @@ namespace ConnectingPeople.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ConnectingPeople.Data.Models.HelpTask", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatorId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(950)")
+                        .HasMaxLength(950);
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RatingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatorId");
+
+                    b.HasIndex("RatingId")
+                        .IsUnique();
+
+                    b.ToTable("HelpTasks");
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Models.HelpTaskItems", b =>
+                {
+                    b.Property<int>("HelpTaskId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ItemUseType")
+                        .HasColumnType("int");
+
+                    b.HasKey("HelpTaskId", "ItemId");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("HelpTaskItems");
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Models.Item", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FAIconClass")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameInCyrillic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Models.Rating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatorComment")
+                        .HasColumnType("nvarchar(160)")
+                        .HasMaxLength(160);
+
+                    b.Property<int>("CreatorRating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PartnerComment")
+                        .HasColumnType("nvarchar(160)")
+                        .HasMaxLength(160);
+
+                    b.Property<int>("PartnerRating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ratings");
+                });
+
             modelBuilder.Entity("ConnectingPeople.Data.Models.Setting", b =>
                 {
                     b.Property<int>("Id")
@@ -296,6 +401,36 @@ namespace ConnectingPeople.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Models.HelpTask", b =>
+                {
+                    b.HasOne("ConnectingPeople.Data.Models.ApplicationUser", "Creator")
+                        .WithMany("HelpTasks")
+                        .HasForeignKey("CreatorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ConnectingPeople.Data.Models.Rating", "Rating")
+                        .WithOne("HelpTask")
+                        .HasForeignKey("ConnectingPeople.Data.Models.HelpTask", "RatingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Models.HelpTaskItems", b =>
+                {
+                    b.HasOne("ConnectingPeople.Data.Models.HelpTask", "HelpTask")
+                        .WithMany("Items")
+                        .HasForeignKey("HelpTaskId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ConnectingPeople.Data.Models.Item", "Item")
+                        .WithMany("HelpTasks")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

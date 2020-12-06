@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Reflection;
+    using System.Runtime.InteropServices.ComTypes;
     using System.Threading;
     using System.Threading.Tasks;
 
@@ -23,6 +24,14 @@
             : base(options)
         {
         }
+
+        public DbSet<HelpTask> HelpTasks { get; set; }
+
+        public DbSet<Rating> Ratings { get; set; }
+
+        public DbSet<Item> Items { get; set; }
+
+        public DbSet<HelpTaskItems> HelpTaskItems { get; set; }
 
         public DbSet<Setting> Settings { get; set; }
 
@@ -48,6 +57,9 @@
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // Needed for Identity models configuration
+            builder.Entity<HelpTaskItems>()
+                .HasKey(hti => new { hti.HelpTaskId, hti.ItemId });
+
             base.OnModelCreating(builder);
 
             this.ConfigureUserIdentityRelations(builder);

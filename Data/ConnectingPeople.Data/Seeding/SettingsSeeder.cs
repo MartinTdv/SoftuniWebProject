@@ -1,10 +1,9 @@
 ﻿namespace ConnectingPeople.Data.Seeding
 {
+    using ConnectingPeople.Data.Models;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-
-    using ConnectingPeople.Data.Models;
 
     internal class SettingsSeeder : ISeeder
     {

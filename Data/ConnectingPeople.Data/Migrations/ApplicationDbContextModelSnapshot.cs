@@ -190,6 +190,11 @@ namespace ConnectingPeople.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 

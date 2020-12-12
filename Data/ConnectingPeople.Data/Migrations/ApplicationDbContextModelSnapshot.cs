@@ -289,6 +289,9 @@ namespace ConnectingPeople.Data.Migrations
                     b.Property<int>("CreatorRating")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreatorRatingColorClass")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
@@ -298,12 +301,19 @@ namespace ConnectingPeople.Data.Migrations
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PartnerComment")
+                    b.Property<string>("OthersideComment")
                         .HasColumnType("nvarchar(160)")
                         .HasMaxLength(160);
 
-                    b.Property<int>("PartnerRating")
+                    b.Property<int>("OthersideRating")
                         .HasColumnType("int");
+
+                    b.Property<string>("OthersideRatingColorClass")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OthersideUsername")
+                        .HasColumnType("nvarchar(14)")
+                        .HasMaxLength(14);
 
                     b.Property<int>("TaskId")
                         .HasColumnType("int");

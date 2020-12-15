@@ -11,6 +11,7 @@
     using ConnectingPeople.Services.Data;
     using ConnectingPeople.Services.Mapping;
     using ConnectingPeople.Services.Messaging;
+    using ConnectingPeople.Web.Hubs;
     using ConnectingPeople.Web.ViewModels;
 
     using Microsoft.AspNetCore.Builder;
@@ -67,6 +68,9 @@
             services.AddTransient<IProfileService, ProfileService>();
             services.AddTransient<IItemService, ItemService>();
             services.AddTransient<IHelpTaskService, HelpTaskService>();
+            services.AddTransient<IChatService, ChatService>();
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,6 +109,7 @@
             app.UseEndpoints(
                 endpoints =>
                     {
+                        endpoints.MapHub<ChatHub>("/chat");
                         endpoints.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                         endpoints.MapControllerRoute(
                             name: "profile",

@@ -19,6 +19,84 @@ namespace ConnectingPeople.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ConnectingPeople.Data.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("About")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OthersideConnectionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OthersideUsername")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TaskCreatorConnectionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TaskCreatorUsername")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Chat");
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SenderUsername")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Message");
+                });
+
             modelBuilder.Entity("ConnectingPeople.Data.Models.ApplicationRole", b =>
                 {
                     b.Property<string>("Id")
@@ -357,6 +435,21 @@ namespace ConnectingPeople.Data.Migrations
                     b.ToTable("Settings");
                 });
 
+            modelBuilder.Entity("ConnectingPeople.Data.Models.UserChat", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "ChatId");
+
+                    b.HasIndex("ChatId");
+
+                    b.ToTable("UserChat");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -461,6 +554,15 @@ namespace ConnectingPeople.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("ConnectingPeople.Data.Message", b =>
+                {
+                    b.HasOne("ConnectingPeople.Data.Chat", null)
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("ConnectingPeople.Data.Models.HelpTask", b =>
                 {
                     b.HasOne("ConnectingPeople.Data.Models.ApplicationUser", "Creator")
@@ -485,6 +587,21 @@ namespace ConnectingPeople.Data.Migrations
                     b.HasOne("ConnectingPeople.Data.Models.Item", "Item")
                         .WithMany("HelpTasks")
                         .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Models.UserChat", b =>
+                {
+                    b.HasOne("ConnectingPeople.Data.Chat", "Chat")
+                        .WithMany("Users")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ConnectingPeople.Data.Models.ApplicationUser", "User")
+                        .WithMany("Chats")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });

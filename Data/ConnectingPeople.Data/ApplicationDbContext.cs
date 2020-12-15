@@ -60,6 +60,9 @@
             builder.Entity<HelpTaskItems>()
                 .HasKey(hti => new { hti.HelpTaskId, hti.ItemId });
 
+            builder.Entity<UserChat>()
+                .HasKey(uc => new { uc.UserId, uc.ChatId });
+
             base.OnModelCreating(builder);
 
             this.ConfigureUserIdentityRelations(builder);

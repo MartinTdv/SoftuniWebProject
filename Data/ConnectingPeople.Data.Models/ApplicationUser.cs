@@ -16,6 +16,8 @@ namespace ConnectingPeople.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.Chats = new List<UserChat>();
+            this.HelpTasks = new List<HelpTask>();
         }
 
         //User info
@@ -46,6 +48,8 @@ namespace ConnectingPeople.Data.Models
         public string ImageName { get; set; }
 
         public ICollection<HelpTask> HelpTasks { get; set; }
+
+        public ICollection<UserChat> Chats { get; set; }
 
 
         // Audit info

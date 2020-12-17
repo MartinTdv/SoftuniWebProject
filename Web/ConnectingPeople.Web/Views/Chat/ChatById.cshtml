@@ -1,0 +1,83 @@
+﻿@model ConnectingPeople.Web.ViewModels.Chat.ChatByIdViewModel
+<div class="container">
+    <div class="row-cols">
+        <div class="row justify-content-center">
+            <h2 class="font-weight-bold mr-5">Относно:</h2>
+            <h2>@Model.About</h2>
+        </div>
+        <hr class="bg-primary"/>
+        <div class="row justify-content-center">
+            <ul style="height:490px; display:flex; flex-direction:column" id="messagesList" class="overflow-auto col-9 bg-info align-self-center">
+                @foreach (var message in Model.Messages)
+                {
+                    if(message.SenderUsername == this.User.Identity.Name)
+                    {
+                        <li style="max-width:750px" class="list-group-item list-group-item-primary align-self-end rounded mb-2">
+                            <text class="font-weight-bold">Вие:</text>
+                            <text class="text-break">@message.Text</text>
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="max-width:750px" class="list-group-item list-group-item-success align-self-start rounded mb-2">
+                            <text class="font-weight-bold">@message.SenderUsername:</text>
+                            <text class="text-break">@message.Text</text>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="row justify-content-center">
+            <textarea id="messageInput" class="col-8" type="text" placeholder="Message" rows="3"></textarea>
+            <button id="sendButton" class="col-1 ml-2 btn btn-primary">Изпрати!</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+<script src="~/lib/signalr//dist//browser/signalr.min.js" asp-append-version="true"></script>
+
+<script>
+    var connection =
+        new signalR.HubConnectionBuilder()
+            .withUrl("/chat/@this.ViewContext.RouteData.Values["id"]")
+            .build();
+
+    connection.on("NewMessage",
+        function (message) {
+            var chatInfo =
+                `<li style="max-width:750px" class="list-group-item list-group-item-success align-self-start rounded mb-2">
+                        <text class="font-weight-bold">${message.user}:</text>
+                        <text class="text-break">${escapeHtml(message.text)}</text>
+                    </li>`;
+            $("#messagesList").append(chatInfo);
+        });
+    connection.on("MyMessage",
+            function (message) {
+                var chatInfo =
+                    `<li style="max-width:750px" class="list-group-item list-group-item-primary align-self-end rounded mb-2">
+                    <text class="font-weight-bold">Вие:</text>
+                    <text class="text-break">${escapeHtml(message.text)}</text>
+                </li>`;
+                $("#messagesList").append(chatInfo);
+            });
+
+    $("#sendButton").click(function () {
+        var messageText = $("#messageInput").val();
+        connection.invoke("Send", messageText);
+        $("#messageInput").val("");
+    });
+
+    connection.start().catch(function (err) {
+        return console.error(err.toString())
+    });
+
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+</script>

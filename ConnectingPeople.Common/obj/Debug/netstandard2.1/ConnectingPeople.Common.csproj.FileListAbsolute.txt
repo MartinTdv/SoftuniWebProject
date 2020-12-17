@@ -1,0 +1,9 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\bin\Debug\netstandard2.1\ConnectingPeople.Common.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\bin\Debug\netstandard2.1\ConnectingPeople.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\bin\Debug\netstandard2.1\ConnectingPeople.Common.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\obj\Debug\netstandard2.1\ConnectingPeople.Common.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\obj\Debug\netstandard2.1\ConnectingPeople.Common.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\obj\Debug\netstandard2.1\ConnectingPeople.Common.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\obj\Debug\netstandard2.1\ConnectingPeople.Common.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\obj\Debug\netstandard2.1\ConnectingPeople.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\ConnectingPeople.Common\obj\Debug\netstandard2.1\ConnectingPeople.Common.pdb

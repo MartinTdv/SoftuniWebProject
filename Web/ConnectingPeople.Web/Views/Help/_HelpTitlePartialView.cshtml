@@ -1,0 +1,12 @@
+﻿@if (this.Url.Action() == "/Help/Offer")
+{
+    <h1 class="text-center">Избери помощник</h1>
+    <h3 class="text-center">или</h3>
+    <a class="col-4 btn btn-success" asp-controller="Forms" asp-action="Need">Поискай помощ!</a>
+}
+else
+{
+    <h1 class="text-center">Избери и помогни</h1>
+    <h3 class="text-center">или</h3>
+    <a class="col-4 btn btn-success" asp-controller="Forms" asp-action="Offer">Предложи помощ!</a>
+}

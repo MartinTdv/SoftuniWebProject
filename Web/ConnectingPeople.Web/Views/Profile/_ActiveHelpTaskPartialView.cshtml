@@ -1,0 +1,54 @@
+﻿@model ConnectingPeople.Web.ViewModels.HelpTasks.HelpTaskViewModel
+@{
+    var isTypeNeed = Model.Type == ConnectingPeople.Common.Enums.TaskType.Need;
+    var isMyProfile = this.ViewContext.RouteData.Values["username"].ToString() == this.User.Identity.Name.ToString();
+    
+    ViewData["titleName"] = isTypeNeed ? "Желая помощ за:" : "Предлагам помощ за:";
+    ViewData["buttonName"] = isTypeNeed ? "Помогни!" : "Желая Помощ!";
+
+}
+<div class="row">
+    <div class="col text-left">
+        <h2 class="font-weight-bold">@ViewData["titleName"]</h2>
+        <h3>@Model.Title</h3>
+    </div>
+    <form asp-controller="Forms" asp-action="Apply" method="get">
+        <input name="about" type="hidden" value="@Model.Title" />
+        <input name="taskCreatorUsername" type="hidden" value="@Model.CreatorUserName" />
+        @if(!isMyProfile)
+        {
+            <button type="submit" class="col-1-2 btn btn-info btn-group-vertical" asp-controller="Forms" asp-action="Apply" asp-route-id="@Model.Id">@ViewData["buttonName"]</button>
+        }
+    </form>
+</div>
+<ul class="list-inline">
+    @foreach (var item in Model.Items.OrderByDescending(x => x.ItemUseType))
+    {
+        if (item.ItemUseType == ConnectingPeople.Data.Common.Enums.ItemUseType.Mandatory)
+        {
+            <li class="@item.FAIconClass list-inline-item text-danger">@item.NameInCyrillic</li>
+        }
+        else if(item.ItemUseType == ConnectingPeople.Data.Common.Enums.ItemUseType.Helpful)
+        {
+            <li class="@item.FAIconClass list-inline-item text-primary">@item.NameInCyrillic</li>
+        }
+        else
+        { 
+            <li class="@item.FAIconClass list-inline-item text-success">@item.NameInCyrillic</li>
+        }
+    }
+</ul>
+
+
+<div class="row">
+    <img src="~/helpTaskPics/@(Model.ImageName).png" onerror="this.src = '/help.jpg'; this.onerror = null" class="col-3 h-100 rounded-circle bg-dark" />
+    <p class="col">@Model.Description</p>
+</div>
+<div class="row font-weight-bold">
+    <p class="col text-left">@Model.Location</p>
+    <p class="col text-right">@Model.CreatedOn.ToString("HH:mm, dd/MM/yyyy")</p>
+    @if (isMyProfile)
+    {
+        <a class="col-2 btn btn-danger" asp-controller="Help" asp-action="Delete" asp-route-id="@Model.Id">Изтрий!</a>
+    }
+</div>

@@ -1,0 +1,49 @@
+﻿@model ConnectingPeople.Web.ViewModels.Forms.NeedHelpFormInputModel
+
+    <div class="row-cols ">
+        <form class="row text-center justify-content-center" method="post" asp-action="Need" enctype="multipart/form-data">
+            <div class="col-10 mb-5">
+                <label class="font-weight-bold" asp-for="@Model.Title"></label>
+                <input asp-for="@Model.Title" class="form-control" />
+                <span asp-validation-for="@Model.Title"></span>
+                <br />
+                <label class="font-weight-bold" asp-for="@Model.Description"></label>
+                <input asp-for="@Model.Description" class="form-control" />
+                <span asp-validation-for="@Model.Description"></span>
+                <br />
+                <label class="font-weight-bold" asp-for="@Model.Location"></label>
+                <input asp-for="@Model.Location" class="form-control" />
+                <span asp-validation-for="@Model.Location"></span>
+                <br />
+                <label class="font-weight-bold" asp-for="@Model.Image"></label>
+                <input asp-for="@Model.Image" class="form-control" />
+                <span asp-validation-for="@Model.Image"></span>
+                <br />
+                <div class="float-left">
+                    <label class=" font-weight-bold">Задължително необходими:</label>
+                    <hr />
+                    @for (int i = 0; i < this.Model.Items.Count(); i++)
+                    {
+                        <input type="checkbox" asp-for="@Model.Items[i].SelectedAsMandatory" class="form-control-lg align-middle" />
+                        <label class="@Model.Items[i].FAIconClass fa-lg" asp-for="@Model.Items[i].SelectedAsMandatory">&nbsp @Model.Items[i].NameInCyrillic</label>
+                        <input type="hidden" asp-for="@Model.Items[i].Id" />
+                        <br />
+                    }
+                </div>
+
+                <div class="float-right">
+                    <label class="font-weight-bold">Биха ни улеснили:</label>
+                    <hr />
+                    @for (int i = 0; i < this.Model.Items.Count(); i++)
+                    {
+                        <input type="checkbox" asp-for="@Model.Items[i].SelectedAsHelpful" class="form-control-lg align-middle" />
+                        <label class="@Model.Items[i].FAIconClass fa-lg" asp-for="@Model.Items[i].SelectedAsHelpful">&nbsp @Model.Items[i].NameInCyrillic</label>
+                        <input type="hidden" asp-for="@Model.Items[i].Id" />
+                        <br />
+                    }
+                </div>
+            </div>
+            
+            <input type="submit" class="col-4 btn btn-primary mt-5" />
+        </form>
+    </div>

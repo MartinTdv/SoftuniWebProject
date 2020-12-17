@@ -1,0 +1,47 @@
+﻿@model ConnectingPeople.Web.ViewModels.HelpTasks.HelpTaskViewModel
+@{ 
+    var isTypeNeed = Model.Type == ConnectingPeople.Common.Enums.TaskType.Need;
+
+    ViewData["titleName"] = isTypeNeed ? "Желая помощ за:" : "Предлагам помощ за:";
+    ViewData["buttonName"] = isTypeNeed ? "Помогни!" : "Желая Помощ!";
+}
+
+ 
+<div class="container">
+    <div class="row">
+        <div class="col text-left">
+            <h2 class="font-weight-bold"> @ViewData["titleName"]</h2>
+            <h3>@Model.Title</h3>
+        </div>
+            <a class="col-0 btn btn-info btn-group-vertical" asp-controller="Forms" asp-action="Apply" asp-route-id="@Model.Id">@ViewData["buttonName"]</a>
+        </div>
+    <ul class="list-inline m-md-0">
+        @foreach (var item in Model.Items)
+        {
+            if (item.ItemUseType == ConnectingPeople.Data.Common.Enums.ItemUseType.Mandatory)
+            {
+                <li class="@item.FAIconClass list-inline-item text-danger">@item.NameInCyrillic</li>
+            }
+            else if (item.ItemUseType == ConnectingPeople.Data.Common.Enums.ItemUseType.Helpful)
+            {
+                <li class="@item.FAIconClass list-inline-item text-primary">@item.NameInCyrillic</li>
+            }
+            else
+            {
+                <li class="@item.FAIconClass list-inline-item text-success">@item.NameInCyrillic</li>
+            }
+        }
+    </ul>
+</div>
+
+<div class="row">
+    <img src="~/helpTaskPics/@(Model.ImageName).png" onerror="this.src = '/help.jpg'; this.onerror = null" class="col-3 rounded-circle h-25 bg-dark" />
+    <p class="col">@Model.Description</p>
+</div>
+<div class="row text-right">
+    <p class="col-9">@Model.CreatedOn.ToString("HH:mm, dd/MM/yyyy")</p>
+    <text class="col font-weight-bold">От:</text>
+    <a asp-controller="Profile" asp-action="ByName" asp-route-username="@Model.CreatorUserName" asp-ro class="col-0 mr-5">@Model.CreatorUserName</a>
+</div>
+
+

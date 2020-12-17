@@ -1,0 +1,32 @@
+﻿@model ConnectingPeople.Web.ViewModels.Profile.ProfileViewModel
+
+@if (this.ViewContext.RouteData.Values["username"].ToString() == this.User.Identity.Name.ToString())
+{
+    <div class="row justify-content-center">
+        <div class="col-3 mr-3 mt-3">
+            <a class="col text-dark font-weight-bold btn btn-info" asp-area="Identity" asp-controller="Account" asp-action="Manage">Настройки</a>
+        </div>
+        <div class="col-3 ml-3 mt-3">
+            <a class="col text-dark font-weight-bold btn btn-info" asp-area="" asp-controller="Profile" asp-action="">Профил</a>
+        </div>
+    </div>
+}
+else
+{
+    <h1 class="col text-center text- font-weight-bold">
+        @Model.UserName's Profile
+    </h1>
+}
+<hr />
+<div class="row embed-responsive-4by3">
+    <div class="col-3 text-center">
+        <img class="col rounded-circle " src="~/profilePics/@(Model.ImageName).png" onerror="this.src = '/defaultUser.png'; this.onerror = null" />
+        <h3 class="col font-weight-bold mt-3 mb-5">@Model.UserName</h3>
+        <i class=" col fas fa-book-open fa-2x"></i>
+        <p class="font-weight-bold">Описание:</p>
+        <text class="col font-italic text-center">@Model.Description</text>
+    </div>
+    <div class="col">
+        <partial name="_UserTasksPartialView" , model="@Model.HelpTasks" />
+    </div>
+</div>

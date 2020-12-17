@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ElusiveDeath\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ElusiveDeath\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+﻿@model IEnumerable< ConnectingPeople.Web.ViewModels.HelpTasks.HelpTaskViewModel>
+
+<form method="get" asp-controller="Profile" asp-action="ByName" class="text-center justify-content-center">
+    <div class="justify-content-center font-weight-bold">
+        <input type="radio" name="isActive" value="true" />
+        <label class="mr-5" for="Active">Активни</label>
+
+        <input type="radio" name="isActive" value="false" />
+        <label for="Inactive">Неактивни</label>
+    </div>
+    <div class="row">
+        <input type="search" name="search" class="col mx-2 form-control" placeholder="Search" />
+        <select id="typeSelect" type="select" name="type" class="col-2 custom-select border-info">
+            <option selected value="@ConnectingPeople.Common.Enums.TaskType.Offer">Предложил</option>
+            <option value="@ConnectingPeople.Common.Enums.TaskType.Need">Получил</option>
+        </select>
+        <button type="submit" class="btn col-1 fas fa-2x fa-search" aria-hidden="true"></button>
+    </div>
+</form>
+<hr class="bg-primary" />
+@if(Model.Any())
+{
+    @foreach (var helpTask in Model)
+    {
+        @if (helpTask.Rating == null)
+        {
+            <partial name="_ActiveHelpTaskPartialView" model="helpTask" />
+        }
+        else
+        {
+            <partial name="_FinishedHelpTaskPartialView" model="helpTask" />
+        }
+        <hr class="bg-secondary mb-5" />
+    }
+}
+else
+{
+    <h3>Потребителят няма постове.</h3>
+}
+

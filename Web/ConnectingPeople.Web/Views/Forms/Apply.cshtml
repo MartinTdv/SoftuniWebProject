@@ -1,0 +1,18 @@
+﻿@model ConnectingPeople.Web.ViewModels.Forms.ApplyFormInputModel
+ 
+    <form class="row-cols text-center justify-content-center" method="post" asp-action="Apply">
+        <input asp-for="@Model.About" type="hidden" value="@Model.About" />
+        <input asp-for="@Model.TaskCreatorUsername" type="hidden" value="@Model.TaskCreatorUsername" />
+        <input asp-for="@Model.OthersideUsername" type="hidden" value="@Model.OthersideUsername" />
+
+        <div class="col">
+            <p class="font-weight-bold mb-0">Относно:</pclass>
+            <p class="mb-5">@Model.About</p>
+
+            <label class="font-weight-bold" asp-for="@Model.MessageText"></label>
+            <textarea rows="4" asp-for="@Model.MessageText" class="form-control"></textarea>
+            <span asp-validation-for="@Model.MessageText"></span>
+            <br />
+        </div>
+        <button type="submit" class="row btn btn-info btn-group-vertical">Изпрати!</button>
+    </form>

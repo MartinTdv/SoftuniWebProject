@@ -1,0 +1,40 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.runtimeconfig.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.runtimeconfig.dev.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Common.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Common.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.csproj.CopyComplete
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.genruntimeconfig.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.deps.json
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.runtimeconfig.json
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.runtimeconfig.dev.json
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Common.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Common.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Common.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Common.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\bin\Debug\netcoreapp3.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.csproj.CopyComplete
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Data\ConnectingPeople.Data\obj\Debug\netcoreapp3.1\ConnectingPeople.Data.genruntimeconfig.cache

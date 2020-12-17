@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/Identity" Path="C:\Users\ElusiveDeath\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.9\staticwebassets\V4\" />
+  <ContentRoot BasePath="_content/ConnectingPeople.Web" Path="C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\wwwroot\" />
+</StaticWebAssets>

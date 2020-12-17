@@ -1,0 +1,9 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\bin\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\bin\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\bin\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\obj\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\obj\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\obj\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\obj\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\obj\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.Infrastructure\obj\Debug\netstandard2.1\ConnectingPeople.Web.Infrastructure.pdb

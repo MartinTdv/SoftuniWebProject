@@ -1,0 +1,16 @@
+﻿@model IEnumerable<ConnectingPeople.Web.ViewModels.HelpTasks.HelpTaskViewModel>
+
+<div class="container text-center">
+    <partial name="_HelpTitlePartialView" />
+</div>
+<hr class="bg-primary" />
+
+<section>
+    @foreach (var helpTask in Model)
+    {
+        <div>
+            <partial name="_PostHelpPartialView" model="helpTask" />
+            <hr class="bg-light mt-3 mb-5" />
+        </div>
+    }
+</section>

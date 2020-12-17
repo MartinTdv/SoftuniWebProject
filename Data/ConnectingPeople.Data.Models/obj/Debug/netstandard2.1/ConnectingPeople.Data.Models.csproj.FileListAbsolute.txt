@@ -1,0 +1,12 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.csproj.CopyComplete
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Data\ConnectingPeople.Data.Models\obj\Debug\netstandard2.1\ConnectingPeople.Data.Models.csproj.CoreCompileInputs.cache

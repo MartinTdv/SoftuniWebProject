@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ConnectingPeople.Web.ViewModels.Chat.UserSummaryChatViewModel>  
+
+<h1 class="text-center">Всички съобщения</h1>
+<hr style="height:1.2px"class ="bg-dark bg-primary" />
+<br/>
+
+<section class="text-center">
+    @foreach (var chat in Model)
+    {
+        <partial name="_UserChatsPartialView" model="chat" />
+        <br />
+        <br />
+        <hr class="bg-secondary mb-5" />
+    }
+</section>

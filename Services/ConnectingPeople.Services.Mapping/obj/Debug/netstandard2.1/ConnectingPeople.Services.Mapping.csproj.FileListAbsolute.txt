@@ -1,0 +1,9 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\obj\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\obj\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\obj\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\obj\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\obj\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Mapping\obj\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.pdb

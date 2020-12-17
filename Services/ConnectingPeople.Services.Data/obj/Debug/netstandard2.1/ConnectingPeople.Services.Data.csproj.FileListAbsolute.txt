@@ -1,0 +1,36 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Data.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Data.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Data.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.csproj.CopyComplete
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Data.deps.json
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Data.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Data.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.pdb
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.csproj.CopyComplete
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.dll
+C:\Users\ElusiveDeath\Desktop\ссаве\Services\ConnectingPeople.Services.Data\obj\Debug\netstandard2.1\ConnectingPeople.Services.Data.pdb

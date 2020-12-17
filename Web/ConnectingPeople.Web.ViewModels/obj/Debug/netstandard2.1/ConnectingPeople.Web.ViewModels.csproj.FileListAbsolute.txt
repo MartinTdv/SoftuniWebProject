@@ -1,0 +1,16 @@
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.deps.json
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Data.Models.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Services.Mapping.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\bin\Debug\netstandard2.1\ConnectingPeople.Data.Common.pdb
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.csprojAssemblyReference.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.AssemblyInfo.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.csproj.CopyComplete
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.dll
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web.ViewModels\obj\Debug\netstandard2.1\ConnectingPeople.Web.ViewModels.pdb

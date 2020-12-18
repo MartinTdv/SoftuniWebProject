@@ -36,12 +36,14 @@
 
 <div class="row">
     <img src="~/helpTaskPics/@(Model.ImageName).png" onerror="this.src = '/help.jpg'; this.onerror = null" class="col-3 rounded-circle h-25 bg-dark" />
-    <p class="col">@Model.Description</p>
+    <p class="col text-break">@Model.Description</p>
 </div>
 <div class="row text-right">
-    <p class="col-9">@Model.CreatedOn.ToString("HH:mm, dd/MM/yyyy")</p>
-    <text class="col font-weight-bold">От:</text>
-    <a asp-controller="Profile" asp-action="ByName" asp-route-username="@Model.CreatorUserName" asp-ro class="col-0 mr-5">@Model.CreatorUserName</a>
+    <p class="col">@Model.CreatedOn.ToString("HH:mm, dd/MM/yyyy")</p>
+    <div class="col">
+        <text class="font-weight-bold">От:</text>
+        <a asp-controller="Profile" asp-action="ByName" asp-route-username="@Model.CreatorUserName" asp-ro class="mr-5">@Model.CreatorUserName</a>
+    </div>
 </div>
 
 

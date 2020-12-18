@@ -6,12 +6,19 @@
 <hr class="bg-primary" />
 
 <section>
-    @foreach (var helpTask in Model)
+    @if (Model.Any())
     {
-        <div>
-            <partial name="_PostHelpPartialView" model="helpTask" />
-            <hr class="bg-light mt-3 mb-5" />
-        </div>
+        @foreach (var helpTask in Model)
+        {
+            <div>
+                <partial name="_PostHelpPartialView" model="helpTask" />
+                <hr class="bg-light mt-3 mb-5" />
+            </div>
+        }
+    }
+    else
+    {
+        <h2>Няма налични обяви.</h2>
     }
 </section>
 

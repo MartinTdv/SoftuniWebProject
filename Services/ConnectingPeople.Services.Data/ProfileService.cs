@@ -12,6 +12,7 @@ using AutoMapper;
     using ConnectingPeople.Data.Common.Repositories;
 using ConnectingPeople.Data.Models;
     using ConnectingPeople.Services.Mapping;
+    using ConnectingPeople.Web.ViewModels.HelpTasks;
     using ConnectingPeople.Web.ViewModels.Profile;
 
     public class ProfileService : IProfileService

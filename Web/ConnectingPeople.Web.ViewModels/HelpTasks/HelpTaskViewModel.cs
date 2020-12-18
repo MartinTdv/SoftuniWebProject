@@ -8,7 +8,7 @@ using System.Text;
 
 namespace ConnectingPeople.Web.ViewModels.HelpTasks
 {
-    public class HelpTaskViewModel :IMapFrom<HelpTask>
+    public class HelpTaskViewModel : IMapFrom<HelpTask>
     {
         public int Id { get; set; }
 

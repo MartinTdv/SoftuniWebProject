@@ -958,3 +958,5 @@ C:\Users\ElusiveDeath\Desktop\ссаве\Web\ConnectingPeople.Web\obj\Debug\netc
 C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Profile\_ActiveHelpTaskPartialView.cshtml.g.cs
 C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Profile\_FinishedHelpTaskPartialView.cshtml.g.cs
 C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forms\StartHelpTask.cshtml.g.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Help\StartedTasks.cshtml.g.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Help\_SingleStartedTasksPartialView.cshtml.g.cs

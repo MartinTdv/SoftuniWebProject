@@ -5,6 +5,7 @@ using ConnectingPeople.Data.Models;
 using ConnectingPeople.Services.Data.Models;
 using ConnectingPeople.Services.Mapping;
 using ConnectingPeople.Web.ViewModels.Forms;
+using ConnectingPeople.Web.ViewModels.HelpTasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -146,6 +147,26 @@ namespace ConnectingPeople.Services.Data
                      Username = x.Creator.UserName,
                 })
                 .FirstOrDefault();
+        }
+
+        public ICollection<StartedTasksViewModel> GetUserAllStartedTasks(string username)
+        {
+            var startedTasks = this.helpTaskRepo.AllAsNoTracking()
+                .Where(x => x.Creator.UserName == username && x.RatingId == null && x.PartnerId != null)
+                .To<StartedTasksViewModel>()
+                .ToList();
+
+            var startedTasksAsPartner = this.helpTaskRepo.AllAsNoTracking()
+                .Where(x => x.Partner.UserName == username && x.RatingId == null)
+                .To<StartedTasksViewModel>()
+                .ToList();
+
+            foreach (var task in startedTasksAsPartner)
+            {
+                startedTasks.Add(task);
+            }
+
+            return startedTasks;
         }
 
         public async Task StartHelpTask(int helpTaskId, string partnerId)

@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConnectingPeople.Common.Enums;
 using ConnectingPeople.Data.Models;
+using ConnectingPeople.Web.ViewModels.HelpTasks;
 using ConnectingPeople.Web.ViewModels.Profile;
 
 namespace ConnectingPeople.Services.Data

@@ -13,10 +13,14 @@
     public class HelpController : BaseController
     {
         private readonly IHelpTaskService helpTaskService;
+        private readonly IProfileService profileService;
 
-        public HelpController(IHelpTaskService helpTaskService)
+        public HelpController(
+            IHelpTaskService helpTaskService,
+            IProfileService profileService)
         {
             this.helpTaskService = helpTaskService;
+            this.profileService = profileService;
         }
 
         public IActionResult Index()
@@ -39,6 +43,12 @@
                 .Where(x => x.CreatorUserName != this.User.Identity.Name)
                 .Reverse()
                 .ToList();
+            return this.View(viewModel);
+        }
+
+        public IActionResult StartedTasks()
+        {
+            var viewModel = this.helpTaskService.GetUserAllStartedTasks(this.User.Identity.Name).ToList();
             return this.View(viewModel);
         }
 

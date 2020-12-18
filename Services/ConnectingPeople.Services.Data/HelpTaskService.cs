@@ -110,12 +110,13 @@ namespace ConnectingPeople.Services.Data
 
         public async Task Delete(int id)
         {
-            var helpTask = await this.helpTaskRepo.All()
+            //var helpTask = this.helpTaskRepo.All()
+            //    .Where(ht => ht.Id == id)
+            //    .FirstOrDefault();
+
+            this.helpTaskRepo.Delete(this.helpTaskRepo.All()
                 .Where(ht => ht.Id == id)
-                .FirstOrDefaultAsync();
-
-            this.helpTaskRepo.Delete(helpTask);
-
+                .FirstOrDefault());
             await this.helpTaskRepo.SaveChangesAsync();
         }
 
@@ -130,7 +131,7 @@ namespace ConnectingPeople.Services.Data
         public ICollection<T> GetAllOfType<T>(TaskType taskType)
         {
             return this.helpTaskRepo.AllAsNoTracking()
-                .Where(x => x.Type == taskType)
+                .Where(x => x.Type == taskType && x.PartnerId == null)
                 .To<T>()
                 .ToList();
         }

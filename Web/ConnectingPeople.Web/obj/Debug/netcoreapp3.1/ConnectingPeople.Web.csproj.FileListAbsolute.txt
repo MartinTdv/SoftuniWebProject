@@ -960,3 +960,4 @@ C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\n
 C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forms\StartHelpTask.cshtml.g.cs
 C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Help\StartedTasks.cshtml.g.cs
 C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Help\_SingleStartedTasksPartialView.cshtml.g.cs
+C:\Users\ElusiveDeath\Desktop\Niki Template\Web\ConnectingPeople.Web\obj\Debug\netcoreapp3.1\Razor\Views\Forms\Finish.cshtml.g.cs

@@ -11,6 +11,7 @@
     using ConnectingPeople.Data;
     using ConnectingPeople.Data.Models;
     using ConnectingPeople.Services.Data;
+    using ConnectingPeople.Services.Data.Models;
     using ConnectingPeople.Web.ViewModels.Forms;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
@@ -182,6 +183,26 @@
         public IActionResult StartHelpTask(int helpTaskId, string partnerId)
         {
             this.helpTaskService.StartHelpTask(helpTaskId, partnerId);
+            return this.RedirectToAction("Index", "Home");
+        }
+
+        public IActionResult Finish(int id)
+        {
+            var helpTask = this.helpTaskService.GetHelpTaskById(id);
+            var viewModel = new FinishFormInputModel
+            {
+                HelpTaskId = id,
+                CreatorUsername = helpTask.CreatorUserName,
+                About = helpTask.Title,
+                OthersideUsername = helpTask.PartnerUserName,
+            };
+
+            return this.View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Finish()
+        {
             return this.RedirectToAction("Index", "Home");
         }
 

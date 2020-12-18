@@ -27,5 +27,7 @@ namespace ConnectingPeople.Services.Data
         Task StartHelpTask(int helpTaskId, string partnerId);
 
         ICollection<StartedTasksViewModel> GetUserAllStartedTasks(string username);
+
+        CreatorAndPartnerUsernamesAndTitleDTO GetHelpTaskById(int id);
     }
 }

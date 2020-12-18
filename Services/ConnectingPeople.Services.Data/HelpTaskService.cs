@@ -137,6 +137,19 @@ namespace ConnectingPeople.Services.Data
                 .ToList();
         }
 
+        public CreatorAndPartnerUsernamesAndTitleDTO GetHelpTaskById(int id)
+        {
+            return this.helpTaskRepo.AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .Select(x => new CreatorAndPartnerUsernamesAndTitleDTO
+                {
+                    CreatorUserName = x.Creator.UserName,
+                    PartnerUserName = x.Partner.UserName,
+                    Title = x.Title,
+                })
+                .FirstOrDefault();
+        }
+
         public TitleAndCreatorUsernameDTO GetTitleAndCreatorUsernameById(int id)
         {
             return this.helpTaskRepo.AllAsNoTracking()

@@ -46,5 +46,7 @@ namespace ConnectingPeople.Data.Models
         public ApplicationUser Partner { get; set; }
 
         public ICollection<HelpTaskItems> Items { get; set; } = new List<HelpTaskItems>();
+
+        public ICollection<Chat> Chats { get; set; }
     }
 }

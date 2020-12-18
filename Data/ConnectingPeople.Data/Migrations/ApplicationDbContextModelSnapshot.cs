@@ -38,6 +38,9 @@ namespace ConnectingPeople.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("HelpTaskId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -57,6 +60,8 @@ namespace ConnectingPeople.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("HelpTaskId");
 
                     b.HasIndex("IsDeleted");
 
@@ -560,6 +565,15 @@ namespace ConnectingPeople.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ConnectingPeople.Data.Chat", b =>
+                {
+                    b.HasOne("ConnectingPeople.Data.Models.HelpTask", "HelpTask")
+                        .WithMany("Chats")
+                        .HasForeignKey("HelpTaskId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ConnectingPeople.Data.Message", b =>

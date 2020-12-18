@@ -22,5 +22,7 @@ namespace ConnectingPeople.Services.Data
         Task Delete(int id);
 
         TitleAndCreatorUsernameDTO GetTitleAndCreatorUsernameById(int id);
+
+        Task StartHelpTask(int helpTaskId, string partnerId);
     }
 }

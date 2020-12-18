@@ -146,5 +146,13 @@ namespace ConnectingPeople.Services.Data
                 })
                 .FirstOrDefault();
         }
+
+        public async Task StartHelpTask(int helpTaskId, string partnerId)
+        {
+            var helpTask = this.helpTaskRepo.All()
+                .FirstOrDefault(x => x.Id == helpTaskId);
+            helpTask.PartnerId = partnerId;
+            await this.helpTaskRepo.SaveChangesAsync();
+        }
     }
 }

@@ -47,5 +47,13 @@ using ConnectingPeople.Data.Models;
             }
             return profile;
         }
+
+        public string GetUserIdByUsername(string username)
+        {
+            return this.userRepo.AllAsNoTracking()
+                .Where(x => x.UserName == username)
+                .Select(x => x.Id)
+                .FirstOrDefault();
+        }
     }
 }

@@ -60,6 +60,7 @@ namespace ConnectingPeople.Services.Data
 
             var chat = new Chat
             {
+                HelpTaskId = input.HelpTaskId,
                 About = input.About,
                 TaskCreatorUsername = input.TaskCreatorUsername,
                 OthersideUsername = input.OthersideUsername,

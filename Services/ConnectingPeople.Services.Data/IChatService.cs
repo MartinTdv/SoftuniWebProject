@@ -26,7 +26,7 @@ namespace ConnectingPeople.Services.Data
 
         Task SaveMessageToChat(Message message);
 
-        public T MapChatById<T>(int chatId);
+        T MapChatById<T>(int chatId);
 
     }
 }

@@ -12,11 +12,7 @@
         <h2 class="font-weight-bold">@ViewData["titleName"]</h2>
         <h3>@Model.Title</h3>
     </div>
-        @if (isMyProfile)
-        {
-            <a class="col-1-2 btn btn-info btn-group-vertical" asp-controller="Forms" asp-action="StartHelpTask" asp-route-id="@Model.Id">Стартирай</a>
-        }
-        else
+        @if (!isMyProfile)
         {
             <a class="col-1-2 btn btn-info btn-group-vertical" asp-controller="Forms" asp-action="Apply" asp-route-id="@Model.Id">@ViewData["buttonName"]</a>
         }

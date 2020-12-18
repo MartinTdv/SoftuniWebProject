@@ -4,6 +4,19 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Добре дошли в @GlobalConstants.SystemName,</h1>
+    <h2>Където доброто винаги побеждава!</h2>
+    <hr class=" mb-5 bg-primary" />
+    <div class="row">
+        <div class="col-6">
+            <img class="mb-4" style="width: 375px ; height:275px" src="~/HelpNow.jpg" alt="Alternate Text" />
+            <h3>Разгледайте обявите на хора нуждаещи се от помощ</h3>
+            <a class="col-9 btn btn-success" asp-controller="Help" asp-action="Need">Желая да помогна!</a>
+        </div>
+        <div class="col-6">
+            <img class="mb-4" style="width: 375px ; height:275px" src="~/PassForward.png" alt="Alternate Text" />
+            <h3>Разгледайте обявите хора, които предлагат да помогнат</h3>
+            <a class="col-9 btn btn-success" asp-controller="Help" asp-action="Offer">Имам нужда от помощ!</a>
+        </div>
+    </div>
 </div>

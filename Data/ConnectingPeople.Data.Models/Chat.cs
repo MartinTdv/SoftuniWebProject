@@ -16,6 +16,9 @@ namespace ConnectingPeople.Data
             this.Users = new List<UserChat>();
             this.Messages = new List<Message>();
         }
+        public int HelpTaskId { get; set; }
+        
+        public HelpTask HelpTask { get; set; }
 
         public string About { get; set; }
 

@@ -5,6 +5,10 @@
             <h2 class="font-weight-bold mr-5">Относно:</h2>
             <h2>@Model.About</h2>
         </div>
+        @if(Model.TaskCreatorUsername == this.User.Identity.Name)
+        {
+            <a class="col btn btn-success" asp-controller="Forms" asp-action="StartHelpTask" asp-route-partnerUsername="@Model.OthersideUsername" asp-route-helpTask="@Model.helpTaskId">Стартирай</a>
+        }
         <hr class="bg-primary"/>
         <div class="row justify-content-center">
             <ul style="height:490px; display:flex; flex-direction:column" id="messagesList" class="overflow-auto col-9 bg-info align-self-center">

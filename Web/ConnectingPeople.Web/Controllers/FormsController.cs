@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
+    using System.Security.Cryptography;
+    using System.Text;
     using System.Threading.Tasks;
     using ConnectingPeople.Common.Enums;
     using ConnectingPeople.Data;
@@ -16,6 +18,7 @@
     using Microsoft.AspNetCore.Http.Extensions;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.ModelBinding;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Internal;
     using SixLabors.ImageSharp;
@@ -25,6 +28,7 @@
         private readonly IWebHostEnvironment webHostEnviroment;
         private readonly IItemService itemService;
         private readonly IHelpTaskService helpTaskService;
+        private readonly IProfileService profileService;
         private readonly IChatService chatService;
         private readonly UserManager<ApplicationUser> userManager;
 
@@ -32,12 +36,14 @@
             IItemService itemService,
             IHelpTaskService helpTaskService,
             IChatService chatService,
+            IProfileService profileService,
             IWebHostEnvironment webHostEnviroment,
             UserManager<ApplicationUser> userManager)
         {
             this.itemService = itemService;
             this.helpTaskService = helpTaskService;
             this.chatService = chatService;
+            this.profileService = profileService;
             this.webHostEnviroment = webHostEnviroment;
             this.userManager = userManager;
         }
@@ -156,15 +162,26 @@
         }
 
         [Authorize]
-        public IActionResult StartHelpTask()
+        public IActionResult StartHelpTask(string partnerUsername, int helpTask)
         {
-            return this.View();
+            var helpTaskTitleAndCreator = this.helpTaskService.GetTitleAndCreatorUsernameById(helpTask);
+            var partnerId = this.profileService.GetUserIdByUsername(partnerUsername);
+            var viewModel = new StartHelpTaskFormInputModel
+            {
+                CreatorUsername = helpTaskTitleAndCreator.Username,
+                Title = helpTaskTitleAndCreator.Title,
+                HelpTaskId = helpTask,
+                PartnerId = partnerId,
+                PartnerUsername = partnerUsername,
+            };
+            return this.View(viewModel);
         }
 
         [Authorize]
         [HttpPost]
-        public IActionResult StartHelpTask(string todo)
+        public IActionResult StartHelpTask(int helpTaskId, string partnerId)
         {
+            this.helpTaskService.StartHelpTask(helpTaskId, partnerId);
             return this.RedirectToAction("Index", "Home");
         }
 

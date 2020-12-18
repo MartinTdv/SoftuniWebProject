@@ -27,6 +27,8 @@
     <Compile Remove="Migrations\20201206173153_HelpTasksAdded.Designer.cs" />
     <Compile Remove="Migrations\20201207131925_NoClue.cs" />
     <Compile Remove="Migrations\20201207131925_NoClue.Designer.cs" />
+    <Compile Remove="Migrations\20201218103341_ForgeinKeyHelpTaskIdAddedToChat.cs" />
+    <Compile Remove="Migrations\20201218103341_ForgeinKeyHelpTaskIdAddedToChat.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

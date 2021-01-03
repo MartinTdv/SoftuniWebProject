@@ -52,10 +52,10 @@
             return this.View(viewModel);
         }
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            this.helpTaskService.Delete(id);
-            return this.RedirectToAction("Index", "Home");
+            await this.helpTaskService.Delete(id);
+            return this.RedirectToAction("Index", "Profile");
         }
     }
 }

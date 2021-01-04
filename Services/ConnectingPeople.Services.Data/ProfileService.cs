@@ -56,5 +56,78 @@ using ConnectingPeople.Data.Models;
                 .Select(x => x.Id)
                 .FirstOrDefault();
         }
+
+        public T MapUserInfoById<T>(string id)
+        {
+            return this.userRepo.AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefault();
+        }
+
+        public ICollection<FinishedTasksToCommentViewModel> GetUserTasksToComment(string id)
+        {
+            var tasksToCommentSeparated = this.userRepo.AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .Select(x => new
+                {
+                    Username = x.UserName,
+                    helpTasksToCommentAsCreator = x.HelpTasks
+                        .Where(c => c.RatingId != null && c.Rating.CreatorComment == null)
+                        .Select(c => new
+                        {
+                            c.Rating.CreatorComment,
+                            c.Rating.OthersideComment,
+                            c.Title,
+                            c.Type,
+                            c.RatingId,
+                            c.ModifiedOn,
+                            PartnerUsername = c.Partner.UserName,
+                        }),
+                    helpTasksToCommentAsPartner = x.HelpTasksAsPartner
+                        .Where(c => c.RatingId != null && c.Rating.OthersideComment == null)
+                        .Select(c => new
+                        {
+                            c.Rating.CreatorComment,
+                            c.Rating.OthersideComment,
+                            c.Title,
+                            c.Type,
+                            c.RatingId,
+                            c.ModifiedOn,
+                            CreatorUsername = c.Creator.UserName,
+                        }),
+                })
+                .FirstOrDefault();
+            List<FinishedTasksToCommentViewModel> tasksToComment = new List<FinishedTasksToCommentViewModel>();
+            foreach (var task in tasksToCommentSeparated.helpTasksToCommentAsCreator)
+            {
+                tasksToComment.Add(new FinishedTasksToCommentViewModel
+                {
+                    Title = task.Title,
+                    Type = task.Type,
+                    RatingId = (int)task.RatingId,
+                    IsPostMine = true,
+                    ModifiedOn = (DateTime) task.ModifiedOn,
+                    CurrentUserName = tasksToCommentSeparated.Username,
+                    OthersideUserName = task.PartnerUsername,
+                });
+            }
+
+            foreach (var task in tasksToCommentSeparated.helpTasksToCommentAsPartner)
+            {
+                tasksToComment.Add(new FinishedTasksToCommentViewModel
+                {
+                    Title = task.Title,
+                    Type = task.Type,
+                    RatingId = (int)task.RatingId,
+                    IsPostMine = false,
+                    ModifiedOn = (DateTime) task.ModifiedOn,
+                    CurrentUserName = tasksToCommentSeparated.Username,
+                    OthersideUserName = task.CreatorUsername,
+                });
+            }
+
+            return tasksToComment;
+        }
     }
 }

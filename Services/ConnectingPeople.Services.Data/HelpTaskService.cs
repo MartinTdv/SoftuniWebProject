@@ -228,7 +228,7 @@ namespace ConnectingPeople.Services.Data
                 .Where(x => x.Id == id)
                 .Select(x => new TitleAndCreatorUsernameDTO
                 {
-                     Title = x.Title, 
+                     Title = x.Title,
                      Username = x.Creator.UserName,
                 })
                 .FirstOrDefault();
@@ -237,19 +237,9 @@ namespace ConnectingPeople.Services.Data
         public ICollection<StartedTasksViewModel> GetUserAllStartedTasks(string username)
         {
             var startedTasks = this.helpTaskRepo.AllAsNoTracking()
-                .Where(x => x.Creator.UserName == username && x.RatingId == null && x.PartnerId != null)
+                .Where(x => (x.Creator.UserName == username || x.Partner.UserName == username) && x.RatingId == null && x.PartnerId != null)
                 .To<StartedTasksViewModel>()
                 .ToList();
-
-            var startedTasksAsPartner = this.helpTaskRepo.AllAsNoTracking()
-                .Where(x => x.Partner.UserName == username && x.RatingId == null)
-                .To<StartedTasksViewModel>()
-                .ToList();
-
-            foreach (var task in startedTasksAsPartner)
-            {
-                startedTasks.Add(task);
-            }
 
             return startedTasks;
         }

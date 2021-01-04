@@ -212,6 +212,16 @@
             return this.RedirectToAction("Index", "Home");
         }
 
+        public IActionResult Rate(int id)
+        {
+            return this.View();
+        }
+        
+        [HttpPost]
+        public IActionResult Rate(string todo)
+        {
+            return this.View();
+        }
         private string SaveImage(IFormFile image)
         {
             Image img;

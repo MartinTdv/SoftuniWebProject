@@ -1,20 +1,38 @@
 ﻿@model ConnectingPeople.Web.ViewModels.Chat.ChatByIdViewModel
+@{
+    ViewData["taskNotStartable"] = Model.HelpTaskDeletedOn != null ?
+        $"Задачата е изтрита в {((DateTime)Model.HelpTaskDeletedOn).ToString("HH:mm, dd/MM/yyyy")}." :
+        Model.HelpTaskPartnerId != null ? "Задачата е вече стартирана или завършена." :
+        null;
+}
 <div class="container">
     <div class="row-cols">
         <div class="row justify-content-center">
             <h2 class="font-weight-bold mr-5">Относно:</h2>
             <h2>@Model.About</h2>
         </div>
-        @if(Model.TaskCreatorUsername == this.User.Identity.Name)
+
+        @if (ViewData["taskNotStartable"] != null)
         {
-            <a class="col btn btn-success" asp-controller="Forms" asp-action="StartHelpTask" asp-route-partnerUsername="@Model.OthersideUsername" asp-route-helpTask="@Model.helpTaskId">Стартирай</a>
+            <h5 class="col font-weight-bold text-danger text-center">@ViewData["taskNotStartable"]</h5>
         }
-        <hr class="bg-primary"/>
+        else
+        {
+            @if (Model.TaskCreatorUsername == this.User.Identity.Name)
+            {
+                <a class="col btn btn-success" asp-controller="Forms" asp-action="StartHelpTask" asp-route-partnerUsername="@Model.OthersideUsername" asp-route-helpTask="@Model.helpTaskId">Стартирай</a>
+            }
+            else
+            {
+                <h5 class="col font-weight-bold text-primary text-center">Задачата все още не е стартирана.</h5>
+            }
+        }
+        <hr class="bg-primary" />
         <div class="row justify-content-center">
             <ul style="height:490px; display:flex; flex-direction:column" id="messagesList" class="overflow-auto col-9 bg-info align-self-center">
                 @foreach (var message in Model.Messages)
                 {
-                    if(message.SenderUsername == this.User.Identity.Name)
+                    if (message.SenderUsername == this.User.Identity.Name)
                     {
                         <li style="max-width:750px" class="list-group-item list-group-item-primary align-self-end rounded mb-2">
                             <text class="font-weight-bold">Вие:</text>

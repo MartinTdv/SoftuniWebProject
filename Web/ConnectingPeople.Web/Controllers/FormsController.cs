@@ -214,14 +214,42 @@
 
         public IActionResult Rate(int id)
         {
-            return this.View();
+            var rateFormPageDTO = this.helpTaskService.GetRateFormPageDTOByRatingId(id);
+            var currentUserName = this.User.Identity.Name;
+            if (rateFormPageDTO.CreatorUsername != currentUserName && rateFormPageDTO.OthersideUsername != currentUserName)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+            else if (rateFormPageDTO.CreatorUsername == currentUserName && rateFormPageDTO.CreatorComment != null)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+            else if (rateFormPageDTO.OthersideUsername == currentUserName && rateFormPageDTO.OthersideComment != null)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            var viewModel = new RateFormInputModel
+            {
+                RatingId = id,
+                About = rateFormPageDTO.Title,
+                CurrentUserName = currentUserName,
+            };
+
+            return this.View(viewModel);
         }
-        
+
         [HttpPost]
-        public IActionResult Rate(string todo)
+        public async Task<IActionResult> Rate(RateFormInputModel input)
         {
-            return this.View();
+            if (!this.ModelState.IsValid)
+            {
+                return this.RedirectToAction("Rate", new { id = input.RatingId });
+            }
+            await this.helpTaskService.AddCommentAndRating(input.RatingId, input.CurrentUserName, input.Comment, input.Rating);
+            return this.RedirectToAction("StartedTasks", "Help");
         }
+
         private string SaveImage(IFormFile image)
         {
             Image img;

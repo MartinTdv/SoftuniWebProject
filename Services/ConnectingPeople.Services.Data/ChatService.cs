@@ -113,7 +113,7 @@ namespace ConnectingPeople.Services.Data
 
         public T MapChatById<T>(int chatId)
         {
-            return this.chatRepo.AllAsNoTracking()
+            return this.chatRepo.AllAsNoTrackingWithDeleted()
                 .Where(x => x.Id == chatId)
                 .To<T>()
                 .FirstOrDefault();

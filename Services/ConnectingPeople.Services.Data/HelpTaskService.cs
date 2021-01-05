@@ -41,6 +41,55 @@ namespace ConnectingPeople.Services.Data
             this.itemService = itemService;
         }
 
+        public async Task AddCommentAndRating(int ratingId, string currentUserName, string comment, int rating)
+        {
+            var rate = this.ratingRepo.All()
+                .FirstOrDefault(x => x.Id == ratingId);
+            
+            if (rate.OthersideUsername == currentUserName)
+            {
+                rate.OthersideComment = comment;
+                rate.OthersideRating = rating;
+                switch (rating > 7 ? "green" :
+                        rating > 3 ? "yellow" : "red")
+                {
+                    case "green":
+                        rate.OthersideRatingColorClass = "btn-success";
+                        break;
+                    case "yellow":
+                        rate.OthersideRatingColorClass = "btn-warning";
+                        break;
+                    case "red":
+                        rate.OthersideRatingColorClass = "btn-danger";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                rate.CreatorComment = comment;
+                rate.CreatorRating = rating;
+                switch (rating > 7 ? "green" :
+                        rating > 3 ? "yellow" : "red")
+                {
+                    case "green":
+                        rate.CreatorRatingColorClass = "btn-success";
+                        break;
+                    case "yellow":
+                        rate.CreatorRatingColorClass = "btn-warning";
+                        break;
+                    case "red":
+                        rate.CreatorRatingColorClass = "btn-danger";
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            await this.ratingRepo.SaveChangesAsync();
+        }
+
         public async Task CreateNeedAsync(NeedHelpFormInputModel input, [CallerMemberName] string callerMethodName = "")
         {
 
@@ -218,6 +267,24 @@ namespace ConnectingPeople.Services.Data
                     CreatorUserName = x.Creator.UserName,
                     PartnerUserName = x.Partner.UserName,
                     Title = x.Title,
+                })
+                .FirstOrDefault();
+        }
+
+        public RateFormPageDTO GetRateFormPageDTOByRatingId(int id)
+        {
+            return this.helpTaskRepo.AllAsNoTracking()
+                .Where(x => x.RatingId == id)
+                .Select(x => new RateFormPageDTO
+                {
+                    RatingId = id,
+                    Title = x.Title,
+                    CreatorUsername = x.Creator.UserName,
+                    CreatorComment = x.Rating.CreatorComment,
+                    CreatorRating = x.Rating.CreatorRating,
+                    OthersideUsername = x.Rating.OthersideUsername,
+                    OthersideComment = x.Rating.OthersideComment,
+                    OthersideRating = x.Rating.OthersideRating,
                 })
                 .FirstOrDefault();
         }

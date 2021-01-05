@@ -31,5 +31,9 @@ namespace ConnectingPeople.Services.Data
         ICollection<StartedTasksViewModel> GetUserAllStartedTasks(string username);
 
         CreatorAndPartnerUsernamesAndTitleDTO GetHelpTaskById(int id);
+
+        RateFormPageDTO GetRateFormPageDTOByRatingId(int id);
+
+        Task AddCommentAndRating(int ratingId, string currentUserName, string comment, int rating);
     }
 }

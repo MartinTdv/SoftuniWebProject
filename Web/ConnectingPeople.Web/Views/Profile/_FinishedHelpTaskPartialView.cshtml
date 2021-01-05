@@ -28,7 +28,14 @@
     <div class="row-cols mt-3">
         <div class="row">
             <p class="col-1 mr-5">@Model.Rating.OthersideUsername Оценка</p>
-            <p class="col-9 ml-4">@Model.Rating.OthersideComment</p>
+            @if (Model.Rating.OthersideComment != null)
+            {
+                <p class="col-9 ml-4">@Model.Rating.OthersideComment</p>
+            }
+            else
+            {
+                <p class="col-9 ml-4 text-secondary">Все още няма коментар.</p>
+            }
             <text class=" col-0 btn-sm btn-group-vertical float-right @ViewData["OthersideRatingColorClassOrDefault"]">@Model.Rating.OthersideRating/10</text>
         </div>
         <div class="row">
@@ -36,7 +43,14 @@
         </div>
         <div class="row">
             <p class="col-1 mr-5">@Model.CreatorUserName Оценка</p>
-            <p class="col-9 ml-4">@Model.Rating.CreatorComment</p>
+            @if (Model.Rating.CreatorComment != null)
+            {
+                <p class="col-9 ml-4">@Model.Rating.CreatorComment</p>
+            }
+            else
+            {
+                <p class="col-9 ml-4 text-secondary">Все още няма коментар.</p>
+            }
             <text class=" col-0 btn-sm btn-group-vertical float-right @ViewData["CreatorRatingColorClassOrDefault"]">@Model.Rating.CreatorRating/10</text>
 
         </div>
